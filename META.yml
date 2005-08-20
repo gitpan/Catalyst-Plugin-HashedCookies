@@ -1,0 +1,20 @@
+--- #YAML:1.0
+name:                Catalyst-Plugin-HashedCookies
+version:             0.01
+abstract:            Tamper-resistant HTTP Cookies
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.30_01
+author:              Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>
+distribution_type:   module
+requires:     
+    Catalyst:                      0
+    CGI::Cookie:                   0
+    Class::Accessor::Fast:         0
+    Digest::HMAC_MD5:              0
+    Digest::HMAC_SHA1:             0
+    NEXT:                          0
+    Test::More:                    0
+    Tie::IxHash:                   0
+meta-spec:
+    url: <http://module-build.sourceforge.net/META-spec-new.html>;
+    version: 1.1

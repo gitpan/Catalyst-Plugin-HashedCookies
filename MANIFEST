@@ -1,0 +1,11 @@
+Changes
+INSTALL
+MANIFEST
+META.yml
+Makefile.PL
+README
+TODO
+lib/Catalyst/Plugin/HashedCookies.pm
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
