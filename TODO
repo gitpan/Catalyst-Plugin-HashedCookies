@@ -1,3 +1,0 @@
-* More tests are definitely necessary; this is the first release, though.
-* Fix dependencies on Digest:: to allow only SHA1 or MD5 rather than both.
-* PerlTidy

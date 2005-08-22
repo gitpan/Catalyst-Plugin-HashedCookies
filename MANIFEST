@@ -7,5 +7,17 @@ README
 TODO
 lib/Catalyst/Plugin/HashedCookies.pm
 t/00-load.t
+t/10-basics.t
+t/20-plugged.t
+t/30-setup.t
+t/60-catalyst_request.t
+t/70-request.t
+t/80-catalyst_response.t
+t/90-response.t
 t/pod-coverage.t
 t/pod.t
+t/lib/TestApp.pm
+t/lib/TestApp/Controller/Cookies.pm
+t/lib/TestApp/View/Dump.pm
+t/lib/TestApp/View/Dump/Request.pm
+t/lib/BasicTestApp.pm
