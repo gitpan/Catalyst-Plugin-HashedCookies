@@ -10,7 +10,7 @@ use CGI::Cookie;
 use Digest::HMAC_MD5;
 use Digest::HMAC_SHA1;
 use Class::Accessor::Fast;
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 # apparently this should be done by subclassing Catalyst::Request and using
 # response_class, but I'm suspicious that that process isn't tolerant to
@@ -218,7 +218,7 @@ Catalyst::Plugin::HashedCookies - Tamper-resistant HTTP Cookies
 
 =head1 VERSION
 
-This document refers to version 0.04 of Catalyst::Plugin::HashedCookies,
+This document refers to version 0.05 of Catalyst::Plugin::HashedCookies,
 released Monday May 2, 2006.
 
 =head1 SYNOPSIS

@@ -1,5 +1,8 @@
 Revision history for Catalyst-Plugin-HashedCookies
 
+0.05    Tue May  2 13:03:32 BST 2006
+        - Added a test for the new _hashedcookies_* check code
+
 0.04    Tue May  2 10:38:05 BST 2006
         - Silly typo in POD, but was worth correcting to avoid confusion
 
