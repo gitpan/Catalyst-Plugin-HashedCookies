@@ -1,12 +1,12 @@
 Catalyst-Plugin-HashedCookies
+=============================
 
-When HTTP cookies are used to store a user's state or identity it's
-important that your application is able to distinguish legitimate
-cookies from those that have been edited or created by a malicious
-user.
+When HTTP cookies are used to store a user's state or identity it's important
+that your application is able to distinguish legitimate cookies from those
+that have been edited or created by a malicious user.
 
-This module allows you to determine whether a cookie presented by a
-client was created in its current state by your own application.
+This module allows you to determine whether a cookie presented by a client was
+created in its current state by your own application.
 
 INSTALLATION
 
@@ -18,9 +18,22 @@ To install this module, run the following commands:
     make install
 
 
+AUTHOR
+
+Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>
+
 COPYRIGHT AND LICENCE
 
-Copyright (c) 2005, Oliver Gorwits and The University of Oxford.
-All Rights Reserved. This module is free software. It may be used,
-redistributed and/or modified under the same terms as Perl itself.
+Copyright (c) The University of Oxford 2006. All Rights Reserved.
 
+This program is free software; you can redistribute it and/or modify it under
+the terms of version 2 of the GNU General Public License as published by the
+Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+St, Fifth Floor, Boston, MA 02110-1301 USA

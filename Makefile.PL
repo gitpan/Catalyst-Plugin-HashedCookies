@@ -16,7 +16,7 @@ WriteMakefile(
         'Digest::HMAC_SHA1' => 0,
         'Digest::HMAC_MD5' => 0,
     },
-    LICENSE             => 'perl',
+    LICENSE             => 'GPL',
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Catalyst-Plugin-HashedCookies-*' },
 );
