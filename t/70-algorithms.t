@@ -51,7 +51,7 @@ my @cookies = (
 
         my ($creq, $response, undef) = &do_request( $request );
         
-        isa_ok( $creq->cookies->{"HC$i"}, 'CGI::Cookie',
+        isa_ok( $creq->cookies->{"HC$i"}, 'CGI::Simple::Cookie',
             "Cookie \"HC$i\"" );
         is( $creq->cookies->{"HC$i"}->as_string, "HC$i=". $cookies[$i]->[1] .'; path=/',
             "Cookie \"HC$i\" handled by HashedCookies" );
@@ -68,11 +68,11 @@ my @cookies = (
 
     my $creq = &do_request( $request );
 
-    isa_ok( $creq->cookies->{'HC4'}, 'CGI::Cookie', "Cookie HC4 exists" );
-    isa_ok( $creq->cookies->{'HC5'}, 'CGI::Cookie', "Cookie HC5 exists" );
-    isa_ok( $creq->cookies->{'HC6'}, 'CGI::Cookie', "Cookie HC6 exists" );
-    isa_ok( $creq->cookies->{'HC7'}, 'CGI::Cookie', "Cookie HC7 exists" );
-    isa_ok( $creq->cookies->{'HC8'}, 'CGI::Cookie', "Cookie HC8 exists" );
+    isa_ok( $creq->cookies->{'HC4'}, 'CGI::Simple::Cookie', "Cookie HC4 exists" );
+    isa_ok( $creq->cookies->{'HC5'}, 'CGI::Simple::Cookie', "Cookie HC5 exists" );
+    isa_ok( $creq->cookies->{'HC6'}, 'CGI::Simple::Cookie', "Cookie HC6 exists" );
+    isa_ok( $creq->cookies->{'HC7'}, 'CGI::Simple::Cookie', "Cookie HC7 exists" );
+    isa_ok( $creq->cookies->{'HC8'}, 'CGI::Simple::Cookie', "Cookie HC8 exists" );
 
     # required is on, so no hash will be invalid
     is( $creq->valid_cookie('HC4'),   1,  'HC4 Authentication check' );
@@ -92,9 +92,9 @@ my @cookies = (
 
     my $creq = &do_request( $request );
 
-    isa_ok( $creq->cookies->{'HC9'},  'CGI::Cookie', "Cookie HC9 exists" );
-    isa_ok( $creq->cookies->{'HC10'}, 'CGI::Cookie', "Cookie HC10 exists" );
-    isa_ok( $creq->cookies->{'HC11'}, 'CGI::Cookie', "Cookie HC11 exists" );
+    isa_ok( $creq->cookies->{'HC9'},  'CGI::Simple::Cookie', "Cookie HC9 exists" );
+    isa_ok( $creq->cookies->{'HC10'}, 'CGI::Simple::Cookie', "Cookie HC10 exists" );
+    isa_ok( $creq->cookies->{'HC11'}, 'CGI::Simple::Cookie', "Cookie HC11 exists" );
 
     # required is off, so no hash will be ignored
     is( $creq->valid_cookie('HC9'),    1,  'HC9 Authentication check' );

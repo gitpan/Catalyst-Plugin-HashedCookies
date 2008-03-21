@@ -9,7 +9,7 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Catalyst/Plugin/HashedCookies.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'Catalyst' => 0,
+        'Catalyst' => '5.7000',
         'Class::Accessor::Fast' => 0,
         'Tie::IxHash' => 0,
         'NEXT' => 0,

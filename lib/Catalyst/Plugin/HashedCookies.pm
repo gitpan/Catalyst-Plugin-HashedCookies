@@ -6,11 +6,11 @@ use warnings FATAL => 'all';
 use NEXT;
 use Symbol;
 use Tie::IxHash;
-use CGI::Cookie;
+use CGI::Simple::Cookie;
 use Digest::HMAC_MD5;
 use Digest::HMAC_SHA1;
 use Class::Accessor::Fast;
-our $VERSION = 0.05;
+our $VERSION = 1.00;
 
 # apparently this should be done by subclassing Catalyst::Request and using
 # response_class, but I'm suspicious that that process isn't tolerant to
@@ -137,7 +137,7 @@ sub finalize {
     while ( my ( $name, $cookie ) = each %{ $c->response->cookies } ) {
 
         # see finalize_cookies hook, below, for comments
-        my $cgicookie = CGI::Cookie->new(
+        my $cgicookie = CGI::Simple::Cookie->new(
             -name  => $name,
             -value => $cookie->{value},
         );
@@ -177,12 +177,12 @@ sub finalize_cookies {
 
     while ( my ( $name, $cookie ) = each %{ $c->response->cookies } ) {
 
-        # creating a tmp CGI::Cookie is handy for as_string,
+        # creating a tmp CGI::Simple::Cookie is handy for as_string,
         # and also because we can consistenly use ->value as a list
         # 
-        # only -name and -value are used because this is what CGI::Cookie->parse()
+        # only -name and -value are used because this is what CGI::Simple::Cookie->parse()
         # will pass back from an HTTP header - prepare_cookies needs identical hash
-        my $cgicookie = CGI::Cookie->new(
+        my $cgicookie = CGI::Simple::Cookie->new(
             -name  => $name,
             -value => $cookie->{value},
         );
@@ -218,8 +218,8 @@ Catalyst::Plugin::HashedCookies - Tamper-resistant HTTP Cookies
 
 =head1 VERSION
 
-This document refers to version 0.05 of Catalyst::Plugin::HashedCookies,
-released Monday May 2, 2006.
+This document refers to version 1.00 of Catalyst::Plugin::HashedCookies,
+released Friday March 21, 2008.
 
 =head1 SYNOPSIS
 
@@ -390,7 +390,7 @@ All the helpful people in #catalyst.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (c) The University of Oxford 2006. All Rights Reserved.
+Copyright (c) The University of Oxford 2008. All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of version 2 of the GNU General Public License as published by the

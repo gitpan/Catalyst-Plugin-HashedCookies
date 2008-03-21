@@ -4,7 +4,7 @@ This module requires the following other Perl modules:
     Class::Accessor::Fast
     Tie::IxHash
     NEXT
-    CGI::Cookie
+    CGI::Simple::Cookie
     Digest::HMAC_SHA1
     Digest::HMAC_MD5
 

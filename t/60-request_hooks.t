@@ -25,14 +25,14 @@ use HTTP::Request::Common;
    
     # plugin has not mangled cookies in request object
     
-    isa_ok( $creq->cookies->{Catalyst}, 'CGI::Cookie',
+    isa_ok( $creq->cookies->{Catalyst}, 'CGI::Simple::Cookie',
         'Cookie "Catalyst"' );
     is( $creq->cookies->{Catalyst}->name, 'Catalyst',
         'Cookie "Catalyst" name is set' );
     is( $creq->cookies->{Catalyst}->value, 'Cool',
         'Cookie "Catalyst" value is set to "Cool"' );
 
-    isa_ok( $creq->cookies->{Cool}, 'CGI::Cookie',
+    isa_ok( $creq->cookies->{Cool}, 'CGI::Simple::Cookie',
         'Cookie "Cool"' );
     is( $creq->cookies->{Cool}->name, 'Cool',
         'Cookie "Cool" name is set' );
