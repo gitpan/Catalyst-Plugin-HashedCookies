@@ -1,16 +1,33 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Catalyst-Plugin-HashedCookies
-version:      1
-version_from: lib/Catalyst/Plugin/HashedCookies.pm
-installdirs:  site
-requires:
-    Catalyst:                      5.7000
-    Class::Accessor::Fast:         0
-    Digest::HMAC_MD5:              0
-    Digest::HMAC_SHA1:             0
-    NEXT:                          0
-    Tie::IxHash:                   0
-
+---
+abstract: 'Tamper-resistant HTTP Cookies'
+author:
+  - 'Oliver Gorwits C<< <oliver.gorwits@oucs.ox.ac.uk> >>'
+build_requires:
+  Catalyst::Runtime: 5.70
+  Test::More: 0
+  Test::Pod: 0
+  Test::Pod::Coverage: 0
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30_01
+generated_by: 'Module::Install version 0.77'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Catalyst-Plugin-HashedCookies
+no_index:
+  directory:
+    - inc
+    - t
+    - examples
+requires:
+  CGI::Simple::Cookie: 0
+  Catalyst::Runtime: 5.70
+  Class::Accessor::Fast: 0
+  Digest::HMAC_MD5: 0
+  Digest::HMAC_SHA1: 0
+  NEXT: 0
+  Tie::IxHash: 0
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 1.01
