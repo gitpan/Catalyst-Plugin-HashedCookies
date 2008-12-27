@@ -3,7 +3,6 @@ abstract: 'Tamper-resistant HTTP Cookies'
 author:
   - 'Oliver Gorwits C<< <oliver.gorwits@oucs.ox.ac.uk> >>'
 build_requires:
-  Catalyst::Runtime: 5.70
   Test::More: 0
   Test::Pod: 0
   Test::Pod::Coverage: 0
@@ -25,9 +24,9 @@ requires:
   Class::Accessor::Fast: 0
   Digest::HMAC_MD5: 0
   Digest::HMAC_SHA1: 0
-  NEXT: 0
+  MRO::Compat: 0
   Tie::IxHash: 0
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.02
+version: 1.03
