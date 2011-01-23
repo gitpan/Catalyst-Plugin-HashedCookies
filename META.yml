@@ -1,31 +1,35 @@
 ---
 abstract: 'Tamper-resistant HTTP Cookies'
 author:
-  - 'Oliver Gorwits C<< <oliver.gorwits@oucs.ox.ac.uk> >>'
+  - 'Oliver Gorwits <oliver@cpan.org>'
 build_requires:
+  Catalyst: 0
+  Catalyst::Controller: 0
+  Data::Dumper: 0
+  File::Spec::Functions: 0
+  HTTP::Headers::Util: 0
+  HTTP::Request::Common: 0
+  Scalar::Util: 0
   Test::More: 0
-  Test::Pod: 0
-  Test::Pod::Coverage: 0
-distribution_type: module
-generated_by: 'Module::Install version 0.76'
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Catalyst-Plugin-HashedCookies
-no_index:
-  directory:
-    - inc
-    - t
-    - examples
 requires:
   CGI::Simple::Cookie: 0
-  Catalyst::Runtime: 5.70
+  Catalyst::Request: 0
   Digest::HMAC_MD5: 0
   Digest::HMAC_SHA1: 0
   MRO::Compat: 0
+  Symbol: 0
   Tie::IxHash: 0
-  perl: 5.8.1
 resources:
-  license: http://dev.perl.org/licenses/
-version: 1.05
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Catalyst-Plugin-HashedCookies
+  homepage: https://github.com/ollyg/Catalyst-Plugin-HashedCookies/wiki
+  repository: git://github.com/ollyg/Catalyst-Plugin-HashedCookies.git
+version: 1.110231
